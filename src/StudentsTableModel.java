@@ -11,11 +11,13 @@ public class StudentsTableModel extends AbstractTableModel {
 
     public void addStudent(Student student) {
         list.add(student);
+	fireTableRowsInserted(list.size() -1, list.size() -1);
     }
 
 
     public void removeStudent( int index ) {
         list.remove(index);
+	fireTableRowsDeleted(index, index);
     }
 
     @Override
