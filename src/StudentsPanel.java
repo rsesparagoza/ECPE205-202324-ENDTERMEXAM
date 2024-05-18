@@ -36,11 +36,11 @@ public class StudentsPanel extends JPanel {
 	addBtn.addActionListener(new ActionListener(){
        @Override
        public void actionPerformed(ActionEvent e) {
-           String ID = studentIDField.getText();
+           String id  = studentIDField.getText();
            String name = nameField.getText();
 
-           if(!ID.isEmpty() && !name.isEmpty()) {
-               studentsTableModel.addStudent(new Student(ID, name));
+           if(!id.isEmpty() && !name.isEmpty()) {
+               studentsTableModel.addStudent(new Student(id, name));
                studentIDField.setText("");
                nameField.setText("");
            } else {
